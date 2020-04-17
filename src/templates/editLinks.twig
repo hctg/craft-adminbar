@@ -40,7 +40,7 @@
                 {% if entry ?? false %}
                     {% if displayEditDate %}<div class="editlink__updated_label">Last updated</div>{% endif %}
                     {% if displayEditDate %}<div class="editlink__date">{{ entry.dateUpdated|date('m/d/Y') }}</div>{% endif %}
-                    {% if displayEditDate and displayEditAuthor %}<div class="editlink__by">by</div>{% endif %}
+                    {# {% if displayEditDate and displayEditAuthor %}<div class="editlink__by">by</div>{% endif %} #}
                     {% if displayEditAuthor and author ?? false and author.photo ?? false %}<div class="editlink__photo"><img src="{{ author.getThumbUrl(50) }}" alt="{{ author.friendlyName }}’s photo"/></div>{% endif %}
                     {% if displayEditAuthor and author ?? false %}<div class="editlink__name">{{ author.friendlyName ?? entry.author.friendlyName }}</div>{% endif %}
                 {% else %}
